@@ -1,0 +1,70 @@
+.carousel-indicators [data-bs-target] {
+  opacity: 1;
+  width: 185px !important;
+  height: 100px !important;
+  background-image: url(./Rectangle\ 742.png) !important;
+  opacity: 0.5;
+  text-indent: 0% !important;
+  margin: 0% 2px 0% 0% !important;
+  position: relative;
+}
+
+.bton {
+  width: 100%;
+  color: #706dbb;
+  font-weight: bold;
+}
+
+.main1 {
+  background-image: url(./masthead-1440x555-ho.png);
+}
+
+.left {
+  width: 50%;
+  background-image: url(./Rectangle\ 700.png);
+  padding: 40px;
+}
+.left button {
+  padding: 10px;
+  color: #AC2153;
+  font-weight: bold;
+  outline: none;
+  border: none;
+}
+
+.carousel-indicators {
+  width: 85% !important;
+  justify-content: end !important;
+}
+
+button.carousel-control-prev {
+  display: none;
+}
+
+.carousel-control-next-icon {
+  display: none;
+}
+
+.main2 {
+  background-image: url(./masthead-1440x555-ev.png);
+}
+
+.main3 {
+  background-image: url(./MicrosoftTeams-image.png);
+}
+
+button.active::after {
+  content: "";
+  position: absolute;
+  height: 10px;
+  background: red;
+  right: 0;
+  width: 100%;
+  color: #AC2153 !important;
+}
+
+button.active p::after {
+  content: "";
+  position: absolute;
+  color: red;
+}/*# sourceMappingURL=custom.css.map */
