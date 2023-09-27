@@ -1,0 +1,34 @@
+<style>
+  * {
+    /* outline: 1px solid red; */
+    margin: 10px;
+  }
+</style>
+
+<input id="inp"> <button id="btn">Hello</button>
+<ul id="container">
+  
+</ul>
+
+
+<script>
+  let container = document.getElementById("container");
+  let btn = document.getElementById("btn");
+  let inp = document.getElementById("inp");
+
+  btn.onclick = function () {
+    let li = document.createElement("li");
+    li.innerHTML = inp.value;
+    // li.innerHTML = "Hello ";
+
+    // let times = document.createElement("button")
+    // times.innerHTML = "&times;"
+
+    // li.append(times);
+
+
+    container.append(li);
+  };
+
+
+</script>

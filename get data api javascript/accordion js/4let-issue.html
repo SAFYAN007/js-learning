@@ -1,0 +1,23 @@
+<div id="container"></div>
+<p>Solution is let</p>
+
+<script>
+  let container = document.getElementById("container");
+  for (i = 0; i < 10; i++) {
+    let button = document.createElement("button");
+    button.innerHTML = "Click " + i;
+
+    // sufyan(i, button);
+    button.onclick = function () {
+      console.log(this, i);
+    };
+
+    container.append(button);
+  }
+
+  function sufyan(i, button) {
+    button.onclick = function () {
+      console.log(this, i);
+    };
+  }
+</script>

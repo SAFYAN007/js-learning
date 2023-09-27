@@ -1,0 +1,135 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgb(43, 41, 41);
+
+}
+.navbar{
+    background: url(/images/pexels-daniel-absi-952670.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 60vh;
+    position: relative;
+    padding: 0px 50px;
+    margin-bottom: 10px;
+}
+.main{
+    display: flex;
+    justify-content: space-between;
+}
+.bg-dark{
+    border: 5px solid red;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+ul{
+    display: flex;
+    list-style: none;
+    /* justify-content: space-around; */
+}
+li{
+    padding: 10px 0px 0px 50px;
+}
+h2{
+    font-size: 50px;
+}
+.logo{
+    color: white;
+    text-shadow: 3px 0px 10px red;
+}
+.content{
+    color: white;
+    position: absolute;
+    top: 50%;
+    right: 44%;
+    text-align: center;
+    /* border: 5px solid red; */
+
+}
+.btn{
+    padding: 10px 35px;
+    background-color: #c3c9ca;
+    border: none;
+    outline: none;
+    /* cursor: pointer; */
+    margin-top: 10px;
+    font-weight: 700;
+}
+.todo{
+    color:rgb(218, 214, 214);
+    background-color: rgb(47, 48, 48);
+    margin-top: -10px;
+    text-align: center;
+}
+input[type="text"]{
+    width: 800px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    margin-top: 10px;
+}
+.todo-list{
+    text-transform: uppercase;
+    width: 800px;
+    margin:auto;
+    display: block;
+    text-align: left;
+}
+
+.todo-list li{
+    padding: 10px ;
+    color:rgb(218, 214, 214);
+    background-color: rgb(68, 133, 133);
+    margin-top: 10px;
+}
+.all{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+button#one {
+    padding: 10px;
+    background: grey;
+    outline: none;
+    border: none;
+    text-align: center;
+    /* display: flex; */
+    margin-left: 10px;
+}
+main{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.grand{
+    background-color: rgb(79, 87, 84);
+    color: black;
+    width: 330px !important;
+    height: 380px !important;
+}
+.parent{
+    background-color: rgb(34, 35, 36);
+    color: white;
+    width: 265px !important;
+    height: 300px !important;
+}
+.child{
+    background-color: rgb(46, 12, 78);
+    color: white;
+}
+.event{
+    width: 200px;
+    height: 200px;
+    padding: 30px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+}

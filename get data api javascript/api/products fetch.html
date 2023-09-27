@@ -1,0 +1,36 @@
+<style>
+  .products {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .product {
+    border: 1px solid black;
+    margin: 10px;
+  }
+</style>
+
+<div id="container" class="products"></div>
+
+<script>
+  fetch("https://dummyjson.com/products")
+    .then((res) => res.json())
+    .then(function (data) {
+      let products = data.products;
+      let container = document.getElementById("container");
+
+      for (let i = 0; i < products.length; i++) {
+        let product = products[i];
+        let title = product.title;
+        let price = product.price;
+        let stock = product.stock;
+        let thumbnail = product.thumbnail;
+        console.log(thumbnail);
+        container.innerHTML += `<div class="product">
+    <img  src="${thumbnail}"/>
+    <h1>${title}</h1>
+    <h3>$${price}</h3>
+    <h4>${stock}</h4>
+</div>`;
+      }
+    });
+</script>

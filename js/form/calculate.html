@@ -1,0 +1,15 @@
+<script>
+    console.log(location.search)
+    //create object url params
+    let params = new URLSearchParams(location.search);
+    console.log(params)
+    let a = params.get("a");
+    let b = params.get("b");
+    let operator = params.get("operator");
+    console.log({a, b, operator});
+    let result = Number(a) + Number(b);
+    // let result = parseInt(a) + parseInt(b);
+    // let result = parseFloat(a) + parseFloat(b);
+    // let result = +a + +b;
+    console.log("Result ", result);
+</script>

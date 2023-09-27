@@ -1,0 +1,15 @@
+<script>
+    fetch("https://dummyjson.com/posts")
+      .then((res) => res.json())
+      .then(function (data) {
+
+        for(i=0; i<data.posts.length; i++)
+        {
+            let num1 = title.object;
+            // console.log(num1)
+            console.log(data.posts[i]);
+            
+            break;
+        }
+      });
+  </script>

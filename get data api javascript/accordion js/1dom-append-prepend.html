@@ -1,0 +1,31 @@
+<style>
+    *{
+        outline: 1px solid red;;
+        margin: 10px;
+    }
+</style>
+<div id="container">
+    <a>Hello</a>
+    <a>Hello1</a>
+    <a>Hello2</a>
+    <a>Hello3</a>
+</div>
+<p>
+    Append adds to end.<br/>
+    Prepends adds to start
+</p>
+
+<button id="btn">Hello</button>
+
+
+<script>
+    let container = document.getElementById("container");
+    let container2 = document.getElementById("container2");
+    let btn = document.getElementById("btn");
+
+    btn.onclick = function(){
+        
+        // container.append(btn);
+        container.prepend(btn);
+    }
+</script>

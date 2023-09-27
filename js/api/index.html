@@ -1,0 +1,64 @@
+<style>
+  .sidebar {
+    border: 1px solid black;
+    width: 200px;
+    text-align: center;
+  }
+  .container {
+    /* display: flex; */
+    /* border: 2px solid; */
+  }
+
+  .sidebar {
+    list-style: none;
+  }
+  .sidebar a {
+    color: black;
+    text-decoration: none;
+  }
+
+  .sidebar .active {
+    font-weight: bold;
+
+    color: blue;
+  }
+  .parent-container {
+    display: flex;
+  }
+</style>
+
+<form id="search" action="/search.html">
+  <input name="q" />
+  <button>Search</button>
+</form>
+<div class="parent-container">
+  <ul class="sidebar" id="sidebar"></ul>
+  <div id="container" class="container"></div>
+</div>
+
+<script>
+  function capitalizeWords(string) {
+    return string.replace(/(?:^|\s)\S/g, function (a) {
+      return a.toUpperCase();
+    });
+  }
+
+  fetch("https://dummyjson.com/products/categories")
+    .then((res) => res.json())
+    .then(function (data) {
+      console.log(data);
+      let cats = data;
+      let sidebar = document.getElementById("sidebar");
+
+      for (i = 0; i < data.length; i++) {
+        let cat = cats[i];
+        let url = cats[i];
+
+        cat = cat.replace("-", " ");
+        cat = capitalizeWords(cat);
+
+        // let title = categorie.title
+        sidebar.innerHTML += `<li><a href="/category.html?cat=${url}">${cat}</a></li>`;
+      }
+    });
+</script>

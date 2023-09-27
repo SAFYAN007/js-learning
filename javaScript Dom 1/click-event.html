@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Events</title>
+</head>
+<body>
+    <div class="buttons">
+        <button class="one">first </button>
+        <button class="two">second</button>
+        <button class="three">third</button>
+    </div>
+    
+    <script>
+        let btn = document.querySelectorAll(".buttons button");
+// console.log(btn)
+for(let button of btn){
+    button.addEventListener("click", function(){
+        // btn.textcontent;
+        console.log(button.textContent)
+    })
+}
+    </script>
+
+</body>
+</html>

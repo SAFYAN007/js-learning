@@ -1,0 +1,107 @@
+<style>
+  .sidebar {
+    border: 1px solid black;
+    width: 200px;
+    text-align: center;
+  }
+  .container div{
+    /* display: flex; */
+    border: 2px solid;
+  }
+
+  .sidebar {
+    list-style: none;
+  }
+  .sidebar a {
+    color: black;
+    text-decoration: none;
+  }
+
+  .sidebar .active {
+    font-weight: bold;
+
+    color: blue;
+  }
+  .parent-container {
+    display: flex;
+  }
+</style>
+
+<form id="search" action="/search.html">
+  <input id="input" name="q" />
+  <button>Search</button>
+</form>
+<div class="parent-container">
+  <ul class="sidebar" id="sidebar"></ul>
+  <div id="container" class="container"></div>
+</div>
+
+<script>
+  let container = document.getElementById("container");
+  let input = document.getElementById("input");
+  const urlParams = new URLSearchParams(window.location.search);
+  const q = urlParams.get("q");
+
+  if (!q) {
+    container.innerHTML = "No category selected";
+  } else {
+    input.value = q;
+    let url = "https://dummyjson.com/products/search?q=" + q;
+    fetch(url)
+      .then((res) => res.json())
+      .then(function (data) {
+        console.log(data);
+        if(data.products.length == 0)
+        {
+          container.innerHTML = `No result found for keyword <b>${q}</b>`;
+
+        }
+
+        for (let i = 0; i < data.products.length; i++) {
+          let product = data.products[i];
+          let title = product.title;
+          let id = product.id;
+          let description = product.description;
+          let price = product.price;
+          let stock = product.stock;
+          let thumbnail = product.thumbnail;
+          //   console.log(title,description,price,stock,thumbnail)
+          container.innerHTML += `<div>
+                      <h1>${title}</h1>
+                      <p>${description}</p>
+                      <h4>${price}</h4>
+                      <h5>${stock}</h5>
+                      <a href="#">${thumbnail}</a>
+                      </div>`;
+        }
+      });
+  }
+
+  function capitalizeWords(string) {
+    return string.replace(/(?:^|\s)\S/g, function (a) {
+      return a.toUpperCase();
+    });
+  }
+  fetch("https://dummyjson.com/products/categories")
+    .then((res) => res.json())
+    .then(function (data) {
+      
+      let cats = data;
+      let sidebar = document.getElementById("sidebar");
+
+      for (i = 0; i < data.length; i++) {
+        let cat = cats[i];
+        let url = cats[i];
+
+        cat = cat.replace("-", " ");
+        cat = capitalizeWords(cat);
+
+        if (typeof current_cat !== "undefined" && url == current_cat) {
+          sidebar.innerHTML += `<li><a class="active" href="/category.html?cat=${url}">${cat}</a></li>`;
+        } else {
+          sidebar.innerHTML += `<li><a href="/category.html?cat=${url}">${cat}</a></li>`;
+        }
+      }
+
+    });
+</script>

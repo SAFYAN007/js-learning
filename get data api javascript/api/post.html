@@ -1,0 +1,42 @@
+<style>
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .product {
+      border: 1px solid red;
+      margin: 10px;
+    }
+  </style>
+  
+  <div id="container" class="products"></div>
+  
+  <script>
+    fetch("https://dummyjson.com/posts")
+      .then((res) => res.json())
+      .then(function (data) {
+        // console.log(data)
+            let num1 = data.products;
+            let container = document.getElementById("container")
+        for(i=0; i<data.posts.length; i++)
+        {
+            let post = data.posts[i];
+            // let tags = post.tags.map(function(el){
+            //     return `<li>${el}</li>`;
+            // });
+            let tags = post.tags.map(function(el){
+                return`<li>${el}</li>`;
+            })
+
+            container.innerHTML +=`<div>
+                <h1>${post.title}</h1>
+                <p>${post.body}</p>
+                <h3>${post.id}</h3>
+                <ul>${tags.join("")}</ul>
+                </div>`
+
+        
+        }
+      });
+  </script>
+  

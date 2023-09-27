@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        overflow: hidden;
+      }
+      .main {
+        /* background-image: url(./pexels-karol-d-409701.jpg); */
+        color: aliceblue;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 10px;
+        height: 80vh;
+        border-radius: 50px;
+        cursor: pointer;
+        flex: 1;
+        position: relative;
+        transition: 1s all;
+      }
+      .main h1 {
+        font-size: 15px;
+        position: absolute;
+        left: 20px;
+        bottom: 20px;
+        opacity: 0;
+      }
+      .container {
+        display: flex;
+        width: 90vh;
+      }
+      .main.active {
+        flex: 5;
+        color: #c6a9a9;
+        text-shadow: 1px 2px 13px;
+      }
+      .main.active h1 {
+        opacity: 1;
+        transition: 2s all;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div
+        class="main active"
+        style="background-image: url(./pexels-kaique-rocha-518388.jpg)"
+      >
+        <h1>Hello World</h1>
+      </div>
+      <div
+        class="main"
+        style="background-image: url(./pexels-karol-d-409701.jpg)"
+      >
+        <h1>Second World</h1>
+      </div>
+      <div
+        class="main"
+        style="background-image: url(./pexels-maurício-mascaro-376533.jpg)"
+      >
+        <h1>Third World</h1>
+      </div>
+      <div
+        class="main"
+        style="background-image: url(./pexels-muffin-creatives-1629995.jpg)"
+      >
+        <h1>Four World</h1>
+      </div>
+      <div
+        class="main"
+        style="
+          background-image: url(./pexels-nur-andi-ravsanjani-gusma-826809.jpg);
+        "
+      >
+        <h1>Five World</h1>
+      </div>
+    </div>
+
+    <script>
+      let main = document.querySelectorAll(".main");
+      // console.log(main)
+      for (let mane of main) {
+        // console.log(mane)
+        mane.addEventListener("click", function () {
+          removeClass();
+          mane.classList.add("active");
+        });
+      }
+      function removeClass() {
+        for (let mane of main) {
+          mane.classList.remove("active");
+        }
+      }
+    </script>
+  </body>
+</html>

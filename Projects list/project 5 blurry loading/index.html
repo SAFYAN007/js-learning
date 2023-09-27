@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+      }
+      .main {
+        position: relative;
+      }
+
+      .bg {
+        font-size: 30px;
+        font-weight: bold;
+        height: 100vh;
+        background: url(./pexels-sama-bairamova-18386361.jpg);
+        width: 100vw;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        filter: blur(10px);
+        transition: filter 100ms linear;
+      }
+      .percnt {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        color: white;
+        position: absolute;
+        font-size: 50px;
+        top: 0;
+        left: 47%;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="main">
+      <div class="bg"></div>
+      <div class="percnt">0%</div>
+    </div>
+    <script>
+      let percnt = document.querySelector(".percnt");
+      let bg = document.querySelector(".bg");
+      console.log(bg);
+
+      // console.log(percnt)
+      let setint = setInterval(func1, 100);
+      let one = 0;
+      function func1() {
+        one += 3;
+        if (one >= 100) {
+          one = 100;
+          clearInterval(setint);
+        }
+
+        let valueInguna = one / 10;
+        bg.style.filter = "blur(" + (10 - valueInguna) + "px)";
+
+        //
+        // if (one == 9) {
+        //   bg.style.filter = "blur(1px)";
+        // }
+        // if (one == 8) {
+        //   bg.style.filter = "blur(2px)";
+        // }
+        // if (one == 7) {
+        //   bg.style.filter = "blur(3px)";
+        // }
+        // if (one == 6) {
+        //   bg.style.filter = "blur(4px)";
+        // }
+        // if (one == 5) {
+        //   bg.style.filter = "blur(5px)";
+        // }
+        // if (one == 4) {
+        //   bg.style.filter = "blur(6px)";
+        // }
+        // if (one == 3) {
+        //   bg.style.filter = "blur(7px)";
+        // }
+
+        percnt.innerText = `${one}%`;
+      }
+    </script>
+  </body>
+</html>

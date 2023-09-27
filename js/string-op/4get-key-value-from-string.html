@@ -1,0 +1,43 @@
+<script>
+
+
+  let str = "apple=123&b=13&c&d=45";
+
+
+  let array = str.split("&");
+  console.log("str is ", str);
+  console.log("array is ", array);
+
+  for(let reslt of array){
+    let dom = reslt.split("=");
+
+    console.log(dom)
+  }
+
+
+//   let result = {};
+//   console.group("Loop");
+//   for(let el of array)
+//   {
+    
+//     let keyvalue = el.split("=");
+//     let key = keyvalue[0];
+//     let value = keyvalue[1];
+//     // set result 
+//     result[key] = value; //see file setting elements in object
+    
+    
+    
+//     console.group("Element is ", el)
+//     console.log("keyvalue is", keyvalue)
+//     console.log("key is ", key)
+//     console.log("value is ", value);
+//     console.groupEnd();
+//   }
+//   console.groupEnd();
+
+//   console.log("Result", result);
+
+
+
+// </script>

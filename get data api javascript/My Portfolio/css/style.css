@@ -1,0 +1,286 @@
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: monospace;
+}
+
+.nvbar {
+  border-bottom: 1px solid;
+  display: flex;
+  justify-content: end;
+  width: 100%;
+  font-size: 13px;
+  background: transparent;
+}
+.nvbar ul {
+  display: flex;
+  margin-top: 40px;
+  flex-wrap: wrap;
+  padding-bottom: 10px;
+
+}
+.nvbar ul .tags:hover {
+  color: #f70606;
+  transition: 0.5s;
+}
+
+/* Basic styling for the button */
+#toggleButton {
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+button#toggleButton{
+  display: none;
+}
+
+/* Define the animation */
+@keyframes fadeInOut {
+  0% {
+      opacity: 0;
+  }
+  50% {
+      opacity: 1;
+  }
+  100% {
+      opacity: 0;
+  }
+}
+
+/* Apply the animation to the button */
+#toggleButton.animated {
+  animation: fadeInOut 3s ease infinite;
+}
+
+
+
+.one {
+  margin-left: 20px;
+}
+
+.two {
+  margin-left: 30px;
+}
+
+li {
+  list-style: none;
+  padding: 0px 12px;
+  position: relative;
+  transition: 0.4s all ease;
+}
+
+li:hover {
+  COLOR: hsl(0, 95%, 50%) !important;
+  transition: 1s all ease;
+  cursor: pointer;
+}
+
+li::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  transform: scaleX(0);
+  top: 20px;
+  left: 0px;
+  background-color: #f70606;
+  transform-origin: bottom right;
+  transition: transform 0.5s ease-out;
+}
+
+li:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.item{
+  background-color: aqua;
+}
+
+nav#nav{
+  background: linear-gradient(45deg, black, transparent);
+}
+
+
+  
+  
+  
+  .slide-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+  .slide {
+    position: relative;
+    width: 100%;
+    height: 75%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+  .slide-toggle-container {
+    position: absolute;
+    right: 0px;
+    top: 270px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+  
+  .slide-toggle {
+    margin: 0;
+    cursor: pointer;
+  }
+  
+  .chevron {
+    fill: none;
+    stroke: rgba(0,0,0,.8);
+    stroke-width: 3;
+    transition: .2s all linear;
+  }
+  
+  .slide-toggle:hover > .chevron {
+    stroke: rgba(0,0,0,.4);
+  }
+  
+  .index {
+    position: absolute;
+    right: 120px;
+    width: 15%;
+  }
+  
+  
+  /* II. SLIDE 1 STYLES */
+  
+  
+  .slide-1 {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 1px 1px 11px 4px;
+    clip-path: polygon(100% 99%, 100% 0%, 40% 0%, 0% 47%, 14% 100%);
+  }
+  .slide-1 img{
+    width: 100%;
+    transition: transform 5s ease;
+    margin-top: 10%;
+    opacity: .9;
+  }
+  .slide-1 img:hover{
+    transform: scale(1.5);
+    cursor: pointer;
+  }
+  
+  
+  .slide-1 > p {
+    text-align: center;
+    margin: 0;
+    margin-bottom: 25px;
+    color: rgba(0,0,0,.5);
+  }
+  
+  
+  .slide-1 > h1 {
+    text-align: center;
+    margin: 20px 0px 10px 0px;
+    color: rgba(0,0,0,.85);
+  }
+    
+  
+  .vertical-line {
+    position: relative;
+    width: 2px;
+    height: 25%;
+    background-color: rgba(0,0,0,.2);
+  }
+  
+  
+  /* I. SLIDE 2 STYLES */
+  
+  
+  .slide-2 {
+    position: relative;
+    width: 50%;
+    height: auto;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+  }
+  
+  
+  .vertical-line-container {
+    grid-column: 1 / span 3;
+    position: relative;
+    height: 25vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+  .vertical-line-container > .vertical-line {
+    width: 2px;
+    position: relative;
+    height: 75%;
+    background-color: rgba(0,0,0,.2);
+  }
+  
+  
+  /* IV. SLIDE 3 STYLES */
+  
+  .slide-3 {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .slide-3 > h1 {
+    margin: 25px 0px 25px 0;
+    text-shadow: 1px 5px 4px firebrick;
+
+  }
+  
+
+
+
+
+/* media query */
+@media only screen and (max-width: 768px){
+  .nvbar-hidden{
+    display: none;
+  }
+  button#toggleButton {
+    padding: 10px;
+    background: none;
+    border: none;
+    color: white;
+    display: block;
+  }
+}

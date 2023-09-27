@@ -1,0 +1,51 @@
+<!-- <script>
+//     let text = document.querySelector(".text")
+//   let i = 0;
+//   setInterval(function () {
+
+    
+
+//       i++;
+//       if(i >= text.length)
+//       {
+//         i = 0;
+//       }
+//   }, 500);
+</script> -->
+<style>
+    .contanier{
+        width: 100%;
+        /* animation: one 10s linear infinite; */
+    }
+    .text{
+        position: relative;
+        transition: all linear 500ms;
+    }
+    /* @keyframes one{
+        0%{
+            right: -100%;
+        }
+        100%{
+            right: 100%;
+        }
+    } */
+</style>
+
+<div  class="container" style="overflow: hidden;">
+    <div class="text" style="text-wrap: nowrap;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident harum, hic velit nihil voluptate assumenda sunt quas veniam, ullam tempora dolor, explicabo deleniti. Accusantium voluptatum ipsam tempore ex, ad fugit?
+    Lorem ipsum dolor, sit amet consectetur ad
+    </div>
+</div>
+
+
+<script>
+    let container = document.querySelector(".container")
+    let text = document.querySelector(".text");
+    // console.log(text)
+    let one = container.clientWidth;
+    // text.style.left = one + "px";
+    setInterval(function(){
+        one --;
+        text.style.left = one + "px";
+    }, 500)
+</script>

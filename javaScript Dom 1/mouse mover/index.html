@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .mouse_container {
+        height: 100vh;
+        /* width:100vw; */
+        border: 2px solid red;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        position: relative;
+      }
+      .outer {
+        position: absolute;
+        height: 20px;
+        width: 20px;
+        transform: translate(-50%, -50%);
+        background-color: red;
+        border-radius: 50%;
+        pointer-events: none;
+      }
+      .inner {
+        position: absolute;
+        height: 40px;
+        width: 40px;
+        transform: translate(-50%, -50%);
+        border: 2px solid blue;
+        border-radius: 50%;
+        transition: all 200ms ease-out;
+        pointer-events: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="mouse_container" id="mouse_container">
+      <div class="outer" id="outer"></div>
+      <div class="inner" id="inner"></div>
+    </div>
+    <script>
+      const mouse = document.getElementById("mouse_container");
+      const outer = document.getElementById("outer");
+      const inner = document.getElementById("inner");
+      mouse.addEventListener("mousemove", (e) => {
+        outer.style.visibility = "visible";
+        inner.style.visibility = "visible";
+        let x = e.clientX;
+        let y = e.clientY;
+        outer.style.left = x + "px";
+        outer.style.top = y + "px";
+        inner.style.left = x + "px";
+        inner.style.top = y + "px";
+      });
+      mouse.addEventListener("mouseleave", () => {
+        outer.style.visibility = "hidden";
+        inner.style.visibility = "hidden";
+      });
+    </script>
+  </body>
+</html>

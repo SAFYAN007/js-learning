@@ -1,0 +1,29 @@
+<style>
+  * {
+    outline: 1px solid red;
+    margin: 10px;
+  }
+</style>
+<div id="container">
+  <a>Hello</a>
+  <a>Hello0</a>
+  <a id="hello1">Hello1</a>
+  <a>Hello2</a>
+  <a>Hello3</a>
+</div>
+<p>
+  Insert before adds element before another.<br />
+  ReplaceChild replace the element with new element.
+</p>
+<button id="btn">Hello</button>
+
+<script>
+  let container = document.getElementById("container");
+  let hello1 = document.getElementById("hello1");
+  let btn = document.getElementById("btn");
+
+  btn.onclick = function () {
+    //   container.insertBefore(btn, hello1);
+      container.replaceChild(btn, hello1);
+  };
+</script>

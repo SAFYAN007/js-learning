@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+.main{
+    display: flex;
+    justify-content: space-between;
+}
+.left{
+    background: url(./pexels-garrett-morrow-1337247.jpg);
+    width: 50%;
+    height: 80vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 1500ms ease-in-out;
+}
+.right{
+    background: url(./pexels-marko-blazevic-2708981.jpg);
+    width: 50%;
+    height: 80vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 1500ms ease-in-out;
+}
+h1{
+    color: white;
+    font-size: 50px;
+}
+button{
+    padding: 15px 30px;
+    /* font-size: 10px; */
+    margin-top: 10px;
+    background: transparent;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+/* .left:hover{
+    width: 90%;
+    transition: all 1s;
+}
+.right:hover{
+    width: 90%;
+    transition: all 1s;
+} */
