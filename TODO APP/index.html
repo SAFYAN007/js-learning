@@ -1,0 +1,35 @@
+<div class="one">
+<form id="frm">
+    <input type="text" name="" id="inpt">
+    <button id="btn">search</button>
+</form>
+<ul id="list"></ul>
+</div>
+<script>
+    let btn = document.getElementById("btn");
+    let inpt = document.getElementById("inpt");
+
+    let data = ["asdf", "asdfa", "asdfasdf"];
+    for(let todo of data)
+    {
+        list.innerHTML += "<li>" + todo + "<button onclick='remove(this) alert(hello)'>*</button>" +"</li>"
+
+    }
+
+    btn.onclick = function(evt){
+
+
+        evt.preventDefault();
+        if(inpt.value == "" );
+        else{
+            list.innerHTML += "<li>" + inpt.value + "<button onclick='remove(this)'>*</button>" +"</li>"};
+            inpt.value = "";
+    };
+    function remove(btn){
+        console.log(btn.parentElement);
+        btn.parentElement.remove();
+        // let li = btn.parentElement;
+        // li.remove();
+    }
+
+</script>
