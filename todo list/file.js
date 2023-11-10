@@ -2,29 +2,42 @@ let list = document.getElementById("list");
 let todoform = document.getElementById("todoform");
 let int = document.getElementById("input");
 
-let data = [];
+let data = JSON.parse( localStorage.getItem("todos") );
 
-for (let item of data) {
-  list.innerHTML += "<li>" + item + " <button onclick='removeTodo(this)' >&times;</button> </li>";
+// let data = ["Hello", "Wolrd", "Dont","Mind"]
+
+showTodos();
+function showTodos() {
+  list.innerHTML = "";
+
+  for (let i=0;i<data.length;i++) {
+    let item = data[i];
+    list.innerHTML +=
+      "<li>" +
+      item +
+      "<button onclick='removeTodo(this, "+i+")' >&times;</button> </li>";
+  }
 }
 
-todoform.onclick = function (event) {
-  
+function saveToLocalStorage(){
+    localStorage.setItem("todos", JSON.stringify(data));
+}
+
+todoform.addEventListener("click", function (event) {
   event.preventDefault();
-  if (input.value == ""){
-    alert("Empty!!!")
-  }
-  else {
+  if (input.value == "") {
+  } else {
     data.push(input.value);
-    list.innerHTML +=  "<li>" + input.value + "<button onclick='removeTodo(this)' >&times;</button> </li>";
+    showTodos();
     int.value = "";
   }
   int.focus();
-};
+  saveToLocalStorage();
 
-function removeTodo( btn )
-{
-    // btn.parentElement.remove();
-    let li = btn.parentElement;
-    li.remove();
+});
+
+function removeTodo(btn, index) {
+  data.splice(index, 1);
+  showTodos();
+  saveToLocalStorage();
 }

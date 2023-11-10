@@ -1,0 +1,34 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+#canvas{
+    border: 1px solid skyblue;
+}
+.toolbox{
+    background-color: skyblue;
+    width: 902px;
+    padding: 10px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    margin-top: -5px;
+}
+.toolbox > *{
+    background: linear-gradient(45deg, rgba(34,164,116,1) 0%, rgba(41,47,143,1) 100%);
+    border: 1px solid rgb(255, 254, 254);
+    margin: 0px 10px;
+    color: white;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+span{
+    padding-top: 5px;
+}
+.toolbox > *:last-child{
+    font-size: 30px;
+    margin: auto;
+    padding-top: 3px;
+}

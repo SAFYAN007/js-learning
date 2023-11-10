@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="./main.js" defer></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="main">
+        <h3>Password Generator</h3>
+        <div class="result">
+            <span id="password"></span>
+            <button id="clipboard">
+                <i class="fa-regular fa-clipboard"></i>
+            </button>
+        </div>
+        <div class="settings">
+            <label>Password Length</label>
+            <input id="length" type="number" value="8" min="6"   class="length" />
+          </div>
+        <div class="settings">
+          <label>Include UpperCase latter</label>
+          <input id="upper" type="checkbox" checked />
+        </div>
+        <div class="settings">
+          <label>Include Lower latter</label>
+          <input id="lower" type="checkbox" checked />
+        </div>
+        <div class="settings">
+          <label>Include Number latter</label>
+          <input id="number" type="checkbox" checked />
+        </div>
+    <button id="btn-create" class="btn-3">Create Password ⏩ <span id="animation">▙</span></button>
+      </div>
+    </div>
+    <script>
+      let animation = document.getElementById("animation");
+      let i = 0;
+      let str = "⠖⠙⠚";
+      setInterval(()=>{
+        animation.innerHTML = str[i];
+        i++;
+        if(i>=str.length)
+        {
+          i = 0;
+        }
+      }, 100);
+    </script>
+  </body>
+</html>

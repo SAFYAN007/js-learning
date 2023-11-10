@@ -1,5 +1,5 @@
 let currency = [1000, 500, 100, 50, 20, 10, 5, 2, 1];
-let cash = 1567;
+let cash = +prompt()
 let payment = 653;
 let change = calculate(payment, cash);
 
@@ -11,7 +11,7 @@ for (let i = 0; i < currency.length; i++) {
     }
 }
 
-function calculate(payment, cash) {
+function calculate() {
     let rAmount = cash - payment;
     let change = [];
 

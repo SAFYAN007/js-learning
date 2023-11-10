@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(115, 115, 218);
+}
+.main{
+    width: 50%;
+    max-width: 100%;
+}
+.card img{
+    width: 140px;
+    height: 140px;
+    /* clip-path: circle(50% at 50% 50%); */
+    border-radius: 50%;
+    border: 10px double rgb(71, 71, 197);
+    object-fit: cover;
+    object-position: center;
+}
+
+
+.user-form .input{
+    color: white;
+    padding: 20px;
+    width: 100%;
+    background-color: rgb(89, 89, 212);
+    border: none;
+    outline: none;
+    border-radius: 10px;
+}
+.input::placeholder{
+    color: white;
+}
+.card{
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+.profile{
+    margin-top: 20px;
+    background-color: rgb(89, 89, 212);
+    border-radius: 10px;
+    padding: 20px;
+    color: white;
+}
+.content p{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.content ul{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+
+}
+.content ul li{
+    margin-top: 8px;
+}
+.repos{
+    margin-top: 20px;
+    display: flex;
+    gap: 30px; 
+    flex-wrap: wrap;
+}
+.repo {
+    background: darkslateblue;
+    color: white;
+    text-decoration: none;
+    padding: 8px; 
+
+}

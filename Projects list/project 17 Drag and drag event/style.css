@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+}
+.empty{
+    width: 145px;
+    height: 145px;
+    border: 1px dotted black;
+    margin-top: 10px;
+}
+.fill{
+    background-image: url(./pexels-oleksandra-zelena-17035575.jpg);
+    width: 145px;
+    height: 146px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+

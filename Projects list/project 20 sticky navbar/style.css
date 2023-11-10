@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  width: 100%;
+  max-width: 100%;
+  margin: auto;
+}
+.navbar {
+  background-color: rgb(83, 83, 83);
+  overflow: hidden;
+  /* position: absolute; */
+  /* top: 0; */
+  /* width: 100%; */
+  z-index: 1;
+  transition: all 1s linear;
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    background: #3a4646;
+    width: 100%;
+    transition: all 1s;
+
+}
+.sticky li{
+    padding: 18px 20px;
+}
+ul {
+  display: flex;
+  justify-content: end;
+}
+li {
+  list-style: none;
+  padding: 30px 20px;
+  transition: all .5s ease-in;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+/* widget style */
+.widget {
+  position: relative;
+  top: 12px;
+  right: 10px;
+}
+.widget-input {
+  font-size: 20px;
+  padding: 15px;
+  border: none;
+  outline: none;
+  width: 50px;
+  transition: all 1s;
+  border: 1px solid grey;
+  border-radius: 10px;
+}
+.widget-btn {
+  background-color: grey;
+  padding: 15px;
+  font-size: 20px;
+  position: absolute;
+  left: 0;
+  top: 1px;
+  border: none;
+  outline: none;
+  width: 50px !important;
+  transition: all 1s;
+  border-radius: 10px;
+}
+.widget-btn i {
+  color: white;
+}
+.active {
+  width: 230px;
+}
+.btn-active {
+  left: 180px;
+}
+
+/* slider style */
+.slider {
+  width: 100%;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+}
+.slider-main {
+  display: flex;
+  transition: all linear 0.5s;
+}
+.slide {
+  width: 100%;
+  min-width: 100%;
+  height: 80vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.slide.active {
+  display: block;
+}
+.slider-btn {
+  padding: 10px;
+  font-size: 30px;
+  background: linear-gradient(
+    45deg,
+    rgba(34, 164, 116, 1) 0%,
+    rgba(41, 47, 143, 1) 100%
+  );
+  outline: none;
+  border: none;
+  cursor: pointer;
+  color: aliceblue;
+  gap: 50px;
+  border-radius: 5px;
+  position: absolute;
+  top: 50%;
+}
+.slider-btn.one {
+  left: 50px;
+}
+.slider-btn.two {
+  right: 50px;
+}

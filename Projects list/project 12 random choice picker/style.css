@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 400px;
+  margin: auto;
+}
+.textarea {
+  width: 100%;
+  margin-top: 10px;
+  /* height: 100vh; */
+}
+button{
+    padding: 10px 20px ;
+    background-color: cyan;
+    color: white;
+    border: none;
+    margin-top: 10px;
+    border-radius: 50px;
+    font-size: 20px;
+}
+.tags {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+}
+.tags button.active{
+    background-color: red;
+}
+

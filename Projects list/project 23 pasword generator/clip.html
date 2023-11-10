@@ -1,0 +1,14 @@
+<button onclick="gen()">Generate</button>
+<div id="output">
+
+</div>
+<script>
+    let output = document.getElementById("output");
+    function gen(){
+        output.innerHTML = "";
+        for(let i=9829-1000;i<9829+1000;i++)
+        {
+            output.innerHTML += i+" -> "+String.fromCharCode(i)+"<br/>" ;
+        }
+    }
+</script>

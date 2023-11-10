@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="./file.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="canvas" height="500px" width="900px"></canvas>
+    <div class="toolbox">
+        <input type="number" value="5" id="size">
+        <input id="color" type="color">
+        <button onclick="ctx.clearRect(0, 0, canvas.width, canvas.height)">*</button>
+    </div>
+</body>
+</html>

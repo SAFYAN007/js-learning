@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: antiquewhite;
+      }
+      .btns {
+        display: flex;
+        flex-wrap: wrap;
+        width: 230px;
+      }
+      .btns input {
+        padding: 10px 15px;
+        width: 50px;
+      }
+      .one {
+        padding: 10px 15px;
+        width: 200px;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <form action="">
+        <input class="one" type="text" name="display" />
+        <div class="btns">
+          <input type="button" value="C" onclick="display.value  = '' " />
+          <input type="button" value="0" onclick="display.value += '0'" />
+          <input type="button" value="1" onclick="display.value += '1'" />
+          <input type="button" value="2" onclick="display.value += '2'" />
+          <input type="button" value="3" onclick="display.value += '3'" />
+          <input type="button" value="4" onclick="display.value += '4'" />
+          <input type="button" value="5" onclick="display.value += '5'" />
+          <input type="button" value="6" onclick="display.value += '6'" />
+          <input type="button" value="7" onclick="display.value += '7'" />
+          <input type="button" value="8" onclick="display.value += '8'" />
+          <input type="button" value="9" onclick="display.value += '9'" />
+          <input type="button" value="+" onclick="display.value += '+'" />
+          <input type="button" value="-" onclick="display.value += '-'" />
+          <input type="button" value="/" onclick="display.value += '/'" />
+          <input type="button" value="*" onclick="display.value += '*'" />
+          <input
+            type="button"
+            value="="
+            onclick="display.value = eval(display.value)"
+          />
+        </div>
+      </form>
+    </div>
+    <div class="calculator">
+      <form action="" name="display">
+        <input type="text" class="text" />
+        <input type="button" value="2" class="two" />
+        <input type="button" value="+" class="plus" />
+        <input type="button" value="=" class="equal" />
+      </form>
+    </div>
+    <script>
+      let text = document.querySelector(".text");
+      let two = document.querySelector(".two");
+      let plus = document.querySelector(".plus");
+      let equal = document.querySelector(".equal");
+      console.log(display);
+      two.addEventListener("click", function () {
+        text.value += "2";
+      });
+      plus.addEventListener("click", function () {
+        text.value += "+";
+      });
+      equal.addEventListener("click", function () {
+        if(text.value){
+          text.value = eval(text.value);
+        }
+        else{
+          alert("EMPTY")
+        }
+      });
+
+    </script>
+  </body>
+</html>
